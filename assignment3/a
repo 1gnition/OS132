@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for f in `grep -il student *.h | sed 's/shm\.h//'`
+do
+  cat $f > temp
+  cat t > $f
+  cat temp >> $f
+done
+

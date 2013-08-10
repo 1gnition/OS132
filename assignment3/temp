@@ -1,0 +1,4 @@
+/**STUDENT**/
+
+void swapout(void);
+void swapin(struct proc *);
