@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# First create a file which contains the intial string.  We'll fake it thus:
+
+echo "this is a fake string" > temp1.txt
+
+for filename in *.html
+do
+  sed -e '/<html>/,$d' < $filename > temp2.txt
+  cat temp1.txt >> temp2.txt
+  grep '<html>' $filename | head -1 >> temp2.txt
+  sed -e '1,/<html>/d' < $filename >> temp2.txt
+  mv temp2.txt $filename
+done
+
+rm temp1.txt

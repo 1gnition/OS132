@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in *.h
+do
+  cat $f > temp2.txt
+  cat temp1.txt > $f
+  cat temp2.txt >> $f 
+done
