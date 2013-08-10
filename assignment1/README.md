@@ -4,7 +4,7 @@ In this assignment the following features added:
 - Added the PATH environment variable
 - Add a function `wait2(int *wtime, int *rtime)`
   which does the same thing as the original UNIX
-  `wait' system call, but stores the waiting time
+  `wait` system call, but stores the waiting time
   and the running time of the child process waited
   upon.
 - Added three additional scheduling policied to the
